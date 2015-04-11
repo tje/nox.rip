@@ -67,9 +67,10 @@ $(document).ready(function () {
       $('#loading').show();
       NutBounce.load('coffinloop.mp3', function (pulseRate) {
         $('.animated-overlay, .animated-overlay .title, #nox-face').css({
-          '-webkit-animation-duration': pulseRate + 'ms',
-          'animation-duration': pulseRate + 'ms'
+          animationDuration: pulseRate + 'ms'
         });
+
+        $('#boom, #card .card-wrapper').css('animationDuration', (pulseRate * 8) + 'ms, ' + (pulseRate * 16) + 'ms');
 
         $('#loading').hide();
 
