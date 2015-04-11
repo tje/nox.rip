@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>(◣_◢) RIP IN Soppressata (◣_◢)</title>
+  <meta name="title" content="Nox.RIP" />
+  <meta name="description" content="Hoot hoot, motherfucker." />
+  <link rel="image_src" href="http://nox.rip/icon.png" />
+  <meta property="og:title" content="Nox.RIP" />
+  <meta property="og:description" content="Hoot hoot, motherfucker." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://nox.rip/" />
+  <meta property="og:image" content="http://nox.rip/icon.png" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" />
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body>
+
+  <div id="loading"><div class="spinner"></div></div>
+
+  <div id="main-wrapper">
+    <header class="almond-carton">
+      <div class="animated-overlay">
+        <span class="alignment"></span>
+        <span class="title">(◣_◢) SPOOKY (◣_◢)</span>
+      </div>
+      <div id="nox-face"></div>
+    </header>
+    <section id="content">
+      <h1>Activity</h1>
+      <div id="activities"></div>
+    </section>
+    <section id="extra">
+      <div id="stream-info" class="extra-blob offline">
+        <h1>Stream <span class="status"></span></h1>
+      </div>
+      <div class="extra-blob">
+        <h1>Follow</h1>
+        <div id="follow-icons">
+          <a href="https://twitter.com/coL_noxious"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.twitch.tv/noxious_hs"><i class="fa fa-twitch"></i></a>
+          <a href="https://www.youtube.com/user/NoxiousHearthstone"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="extra-blob">
+        <h1>Support</h1>
+        <a href="https://www.g2a.com/r/nox0"><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/panel-43349612-image-5fce3854bfcd4bef-320.png" width="100%" /></a>
+      </div>
+      <div class="extra-blob">
+        <a href="http://www.dxracer.com/us/en-us/product/1/pc_gaming_chair/special_editions/oh-fd96-complexity/"><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/panel-43349612-image-20d5a6e533d4aaf4-320.png" width="100%" /></a>
+      </div>
+    </section>
+  </div>
+
+  <template id="activity">
+    <div class="activity {{source}}">
+      <a href="{{url}}">
+        <div class="thumbnail" style="background-image: url('{{thumbnail}}');"><div class="icon-overlay"><i class="fa fa-{{icon}}"></i></div></div>
+      </a>
+      <h2><a href="{{url}}" class="title">{{title}}</a></h2>
+      <div class="description"><div style="background-image: url('{{thumbnail}}');" class="preview-image"></div>{{description}}</div>
+      <div style="clear: both;"></div>
+      <small class="timestamp" alt="{{timeFull}}" title="{{timeFull}}">{{timeAgo}}</small>
+    </div>
+  </template>
+
+  <template id="stream">
+    <div class="details">
+      <a href="{{url}}">
+        <span class="title">{{description}}</span>
+        <img src="{{thumbnail}}" width="100%" />
+      </a>
+      <small class="timestamp">{{timeAgo}}</small>
+    </div>
+  </template>
+
+</body>
+</html>
