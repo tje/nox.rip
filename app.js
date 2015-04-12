@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $.ajax({
-    url:    'https://cryptic-wave-3815.herokuapp.com',
+    url: 'https://cryptic-wave-3815.herokuapp.com',
     dataType: 'json',
     success: function (transport) {
       transport.activities.forEach(function (el) {
@@ -45,9 +45,16 @@ $(document).ready(function () {
         $(activity).addClass('stream-online').prependTo('#activities');
       }
 
+      $('#loading').hide();
+    },
+    error: function (jqXHR, textStatus, err) {
+      var error = $('template#error').html();
+      error = error.replace(/{{errorMessage}}/g, err || 'Unknown error');
+      $(error).appendTo('#activities');
+      $('#loading').hide();
     }
   });
-      $('#loading').hide();
+
   $(window).on('scroll resize', function () {
     var isFixed = $(this).scrollTop() > $('header').outerHeight()
                   && $('#extra').height() < window.innerHeight
