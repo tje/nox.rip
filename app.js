@@ -45,6 +45,9 @@ $(document).ready(function () {
         $(activity).addClass('stream-online').prependTo('#activities');
       }
 
+      var generated = moment(transport.generated);
+      $('#footer').text('Data generated ' + generated.format('MMMM D h:mm:ss a'));
+
       $('#loading').hide();
     },
     error: function (jqXHR, textStatus, err) {
