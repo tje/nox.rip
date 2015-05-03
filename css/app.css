@@ -21,7 +21,7 @@ body {
 #main-wrapper > header {
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.15);
-  background-image: url('header.png');
+  background-image: url('/img/header.png');
   background-repeat: no-repeat;
   background-position: center;
   height: 200px;
@@ -99,7 +99,7 @@ header.animate .animated-overlay .title {
   left: calc(50% - 100px);
   width: 200px;
   height: 200px;
-  background-image: url('face.png');
+  background-image: url('/img/face.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -467,7 +467,7 @@ h1, h2 {
 .bump {
   width: 100px;
   height: 80%;
-  background-image: url('almondbounce.png');
+  background-image: url('/img/almondbounce.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -509,7 +509,7 @@ h1, h2 {
   left: 0;
   height: 100%;
   width: 300px;
-  background-image: url('drboom.png');
+  background-image: url('/img/drboom.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -607,13 +607,13 @@ header.animate .card-wrapper {
 }
 
 #card .front {
-  background-image: url('card-front.png');
+  background-image: url('/img/card-front.png');
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 #card .back {
-  background-image: url('card-back.png');
+  background-image: url('/img/card-back.png');
 }
 
 @-webkit-keyframes card-pop {
