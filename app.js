@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var store = new Story('NoxRip'),
+      lastChecked = store.get('lastChecked');
+
   $.ajax({
     url: 'https://cryptic-wave-3815.herokuapp.com',
     dataType: 'json',
@@ -8,11 +11,14 @@ $(document).ready(function () {
         el.timeAgo = ts.fromNow();
         el.timeFull = ts.format('MMMM Do YYYY, h:mm a');
         el.icon = el.source;
+
+        var isNew = lastChecked && moment(lastChecked) < ts;
+
         var activity = $('template#activity').html();
         for (var i in el) if (el.hasOwnProperty(i) && typeof el[i] === 'string') {
           activity = activity.replace(new RegExp('{{' + i + '}}', 'g'), el[i]);
         }
-        $(activity).appendTo('#activities');
+        $(activity).toggleClass('new', isNew).appendTo('#activities');
       });
 
       $('#stream-info').removeClass('online offline hosting').addClass(transport.stream.status);
@@ -49,6 +55,8 @@ $(document).ready(function () {
       $('#footer').text('Data generated ' + generated.format('MMMM D h:mm:ss a'));
 
       $('#loading').hide();
+
+      store.set('lastChecked', new Date());
     },
     error: function (jqXHR, textStatus, err) {
       var error = $('template#error').html();
