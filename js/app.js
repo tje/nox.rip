@@ -18,7 +18,7 @@ $(document).ready(function () {
         for (var i in el) if (el.hasOwnProperty(i) && typeof el[i] === 'string') {
           activity = activity.replace(new RegExp('{{' + i + '}}', 'g'), el[i]);
         }
-        $(activity).toggleClass('new', isNew).appendTo('#activities');
+        $(activity).toggleClass('new', !!isNew).appendTo('#activities');
       });
 
       $('#stream-info').removeClass('online offline hosting').addClass(transport.stream.status);
