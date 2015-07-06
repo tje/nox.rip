@@ -3,7 +3,7 @@ $(document).ready(function () {
       lastChecked = store.get('lastChecked');
 
   $.ajax({
-    url: 'https://cryptic-wave-3815.herokuapp.com',
+    url: 'http://localhost:9001', //'https://cryptic-wave-3815.herokuapp.com',
     dataType: 'json',
     success: function (transport) {
       transport.activities.forEach(function (el) {

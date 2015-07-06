@@ -220,7 +220,8 @@ template {
   color: #fff;
 }
 
-.activity.twitter .description {
+.activity.twitter .description,
+.activity.facebook .description {
   display: none;
 }
 
@@ -260,10 +261,11 @@ template {
   color: #ff0;
 }
 
-.activity.twitter .thumbnail .icon-overlay { background-color: #55acee; line-height: 1.8em; } /*rgba(0, 129, 255, 0.75);*/
-.activity.youtube .thumbnail .icon-overlay { background-color: #d42323; } /*rgba(232, 19, 19, 0.75);*/
-.activity.twitch  .thumbnail .icon-overlay { background-color: #6441a5; line-height: 1.9em; } /*rgba(170, 19, 232, 0.75);*/
-.activity.live    .thumbnail .icon-overlay {
+.activity.twitter   .thumbnail .icon-overlay { background-color: #55acee; line-height: 1.8em; } /*rgba(0, 129, 255, 0.75);*/
+.activity.youtube   .thumbnail .icon-overlay { background-color: #d42323; } /*rgba(232, 19, 19, 0.75);*/
+.activity.twitch    .thumbnail .icon-overlay { background-color: #6441a5; line-height: 1.9em; } /*rgba(170, 19, 232, 0.75);*/
+.activity.facebook  .thumbnail .icon-overlay { background-color: #3a5795; line-height: 1.8em; }
+.activity.live      .thumbnail .icon-overlay {
   background-color: #000;
   color: #f00;
   -webkit-animation: live-blink 500ms infinite ease-in-out alternate;
@@ -317,7 +319,7 @@ template {
 }
 #follow-icons .fa,
 .button {
-  font-size: 2em;
+  font-size: 1.6em;
   color: #fff;
   padding: 0.25em;
   width: 1em;
@@ -340,9 +342,10 @@ template {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
 }
 
-#follow-icons .fa-twitter { background-color: #55acee; }
-#follow-icons .fa-youtube { background-color: #d42323; }
-#follow-icons .fa-twitch  { background-color: #6441a5; }
+#follow-icons .fa-twitter   { background-color: #55acee; }
+#follow-icons .fa-youtube   { background-color: #d42323; }
+#follow-icons .fa-twitch    { background-color: #6441a5; }
+#follow-icons .fa-facebook  { background-color: #3a5795; }
 
 #stream-info a {
   text-decoration: none;
